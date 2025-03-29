@@ -1,0 +1,16 @@
+[Unit]
+Description=Science and Technology News Bot
+After=network.target
+
+[Service]
+User=your_username
+WorkingDirectory=/path/to/your/project
+ExecStart=/usr/bin/python3 /path/to/your/project/run_as_service.py
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=science_tech_news_bot
+
+[Install]
+WantedBy=multi-user.target
