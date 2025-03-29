@@ -12,8 +12,8 @@ def setup_blogger_auth():
     print("Setting up Blogger API authentication...")
     
     # Get client ID and client secret
-    client_id = "391743657244-st5hh83vjm14ihkf7t12iabj5bf6mqpp.apps.googleusercontent.com"
-    client_secret = "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"
+    client_id = input("Enter your Google API Client ID: ")
+    client_secret = input("Enter your Google API Client Secret: ")
     
     # Create credentials file
     credentials = {
@@ -58,8 +58,8 @@ def setup_blogger_auth():
     # Create config file
     config = {
         "BLOG_ID": blog_id,
-        "NEWS_API_KEY": "584c30f792ff4d4c9fa1040ee842122e",
-        "OPENAI_API_KEY": "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"
+        "NEWS_API_KEY": input("Enter your NewsAPI key: "),
+        "OPENAI_API_KEY": input("Enter your OpenAI API key: ")
     }
     
     with open("config.json", "w") as f:
